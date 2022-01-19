@@ -1,0 +1,15 @@
+
+.LeftSidebar{
+    grid-area: leftsidebar;
+    background-color: green;
+  
+  }
+  .LeftSidebar .leftmenu .leftmenuitem{
+    padding: 3px;
+    margin: 5px 5px;
+    border: 0.01px solid black;
+    border-radius: 5px;
+    
+    
+  }
+

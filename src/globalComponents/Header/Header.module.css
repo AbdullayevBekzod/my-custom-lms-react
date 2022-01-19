@@ -1,0 +1,34 @@
+.Header{
+    grid-area: header;
+    background-color: red;
+    display: grid;  
+    grid-template-areas:
+    "logo input logout";
+    grid-template-columns: 1fr 5fr 1.5fr;
+  
+  }
+  .searchInput{
+    grid-area: input;
+    margin: 10px auto;
+    width: 50%;
+    height: 25px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background: grey;
+  }
+.inputsearch{
+  width: 100%;
+  background: none ;
+  border: none;
+}
+.buttonsearch{
+  width: 70px;
+  height: 20px;
+}
+.logo{
+    grid-area: logo;
+  }
+  .Header .logout {
+    grid-area: logout;
+
+  }
