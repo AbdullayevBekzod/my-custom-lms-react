@@ -1,5 +1,5 @@
 import { useState, useEffect} from 'react';
-import DefaultCard from '../DefaultCard';
+import CardItem from './CardItem';
 import ShareDetails from './ShareDatails';
 
 function Sharing() {
@@ -35,7 +35,7 @@ function Sharing() {
         return(
             <div className="container grid grid-cols-3">
                 {items.map(item => (    
-                   <DefaultCard id={item.id} image={item.image} title={item.title} price={item.price}/>
+                   <CardItem     id={item.id} image={item.image} title={item.title} price={item.price}/>
                 ))}
   
                 <div className="modal hidden bg-white absolute border 1 rounded-3xl w-4/5 h-[500px]">
