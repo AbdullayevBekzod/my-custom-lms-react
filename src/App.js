@@ -10,7 +10,7 @@ import Grades from './globalComponents/Content/Grades/Grades';
 import Sharing from './globalComponents/Content/Sharing/Sharing';
 import Messenger from './globalComponents/Content/MessageContent/Messenger';
 
-const App = () => {
+const App = (props) => {
   const isAuth = false;
   return (
     <Fragment>
@@ -26,7 +26,7 @@ const App = () => {
           </div>
             <div className='col-span-10'>
               <Routes>
-                <Route path = '/' element={<Dashboard />}/>
+                <Route path = '/' element={<Dashboard store={props.store}/>}/>
                 <Route path = '/deadline' element={<Deadlines />}/>
                 <Route path = '/grades' element={<Grades />}/>
                 <Route path = '/lesson-table' element={<LessonsTable />}/>
