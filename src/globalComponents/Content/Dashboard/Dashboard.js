@@ -31,17 +31,38 @@ function Dashboard(props) {
                 
 
               </div>
+              <div className="courses-box m-4 border rounded-xl p-2">
+                  <h5 className="font-semibold">Current courses</h5>
+                  <div className="mt-5">
+                    <div className="course-hearder grid grid-cols-4 text-center">
+                      <h5 className="text-xs col-span-1 font-semibold">fan nomi</h5>
+                      <h5 className="text-xs col-span-1 font-semibold">qoldirilgan darslar</h5>
+                      <h5 className="text-xs col-span-1 font-semibold">joriy ball</h5>
+                      <h5 className="text-xs col-span-1 font-semibold">umumiy ball</h5>
+                    </div>
+                    <div className="course-content grid grid-cols-4 text-center">
+                        <p className="text-xs col-span-1 ">Math</p>
+                        <p className="text-xs col-span-1 ">1</p>
+                        <p className="text-xs col-span-1 ">44%</p>
+                        <p className="text-xs col-span-1 ">80%</p>
+                    </div>
+                  </div>
+
+              </div>
             </div>
             <div className="col-span-3 bg-white">
               <div className="activity m-4 p-2">
                 <div className="activity-box mx-auto">
                   <h5 className="font-semibold">Last activities</h5>
-                  <div className="following-tags  border-b-[1px] p-2 space-x-1 mx-auto w-fit">
+                  <div className="following-tags  border-b-[1px] p-2 mx-auto w-fit">
                     {props.store.getRelatedTags().map((item)=>{
-                      return <p key={props.store.getRelatedTags().indexOf(item)} className="single-tag inline-block text-[10px] border px-2 w-fit text-gray-400 rounded-xl">
-                        {item}
-                    </p>
-                      
+                      return (
+                        <p 
+                          key={props.store.getRelatedTags().indexOf(item)} 
+                          className="single-tag inline-block text-[9px] ml-1 border px-2 w-fit text-gray-400 rounded-xl"
+                        >
+                          {item}
+                        </p>);                      
                     })}
                  
                     
@@ -56,32 +77,45 @@ function Dashboard(props) {
                             <div className="related-tags mb-2 w-3/5">
                               {item.related_tags.map((i)=>{
                                 return(
-                                  <p key={item.related_tags.indexOf(i)} className="single-tag inline-block text-[10px] border px-2 w-fit text-gray-400 rounded-xl mr-2">
+                                  <p 
+                                    key={item.related_tags.indexOf(i)} 
+                                    className="single-tag inline-block text-[10px] border px-2 w-fit text-gray-400 rounded-xl mr-2"
+                                  >
                                     {i}
-                                </p>
+                                  </p>
                                 );
                               })}
                             </div>
                         </div>
                         <div className="news-content flex items-center">
                             <img
-                            src={item.img}
-                            alt="activityImage"
-                            className="image w-12 h-16"
+                              src={item.img}
+                              alt="activityImage"
+                              className="image w-12 h-16"
                             />
                             <div className="news-header ml-3">
-                                <h5 className="font-semibold text-lg">{item.title}</h5>
-                                <p className="w-44 h-auto text-[10px]">{item.body}</p>
+                                <h5 className="font-semibold text-lg">
+                                  {item.title}
+                                </h5>
+                                <p className="w-44 h-auto text-[10px]">
+                                  {item.body}
+                                </p>
                             </div>
                         </div>
                         <div className="news-footer flex p-1">
                             <div className="news-emotions flex items-center">
-                                <div className="text-[10px] mr-2 flex">{item.like} like</div>
-                                <div className="text-[10px] flex">{item.unlike} dislike</div>
+                                <div className="text-[10px] mr-2 flex">
+                                  {item.like} like
+                                </div>
+                                <div className="text-[10px] flex">
+                                  {item.unlike} dislike
+                                </div>
                             </div>
                             <div className="sender-name grid place-items-end w-full">
                                 <div className="flex items-center">
-                                    <div className="name-of-news-maker text-[10px]">{item.send_by}</div>
+                                    <div className="name-of-news-maker text-[10px]">
+                                      {item.send_by}
+                                    </div>
                                     <div className="image p-2 ml-3 rounded-full bg-green-200"></div>
                                 </div>
                             </div>
@@ -90,8 +124,6 @@ function Dashboard(props) {
                       </div>
                     );
                   })}
-                  
-
                   
                 </div>
               </div>
