@@ -42,7 +42,7 @@ function Messenger (){
                             placeholder="type for writing a message ... "
                             className="w-4/5 ml-2 p-2 border  rounded-xl h-12"
                         />
-                        <a className="border rounded-xl text-center p-3">Send </a>
+                        <button className="border rounded-xl text-center p-3">Send</button>
                     </div>
                 </div>
                 <div className="col-span-3">

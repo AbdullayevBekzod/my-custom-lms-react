@@ -6,7 +6,7 @@ function Sharing() {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
-    const [showModal, setShowModal] = useState(false);
+    // const [showModal, setShowModal] = useState(false);
 
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products?limit=10')
@@ -28,9 +28,9 @@ function Sharing() {
         return <div>Loading ...</div>
     } else {
         
-        function openModal(){
-            setShowModal(true);
-        }
+        // function openModal(){
+        //     setShowModal(true);
+        // }
      
         return(
             <div className="container grid grid-cols-3">
@@ -39,7 +39,7 @@ function Sharing() {
                 ))}
   
                 <div className="modal hidden bg-white absolute border 1 rounded-3xl w-4/5 h-[500px]">
-                    <ShareDetails  openModal={showModal} />
+                    <ShareDetails  /*openModal={showModal}*/ />
                 </div>
       
             </div>

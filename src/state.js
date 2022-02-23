@@ -83,7 +83,7 @@ let store={
             }
         ]
     },
-
+ 
     getRelatedTags(){
         return this._state.related_tags;
     },
