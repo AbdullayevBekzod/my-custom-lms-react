@@ -1,6 +1,7 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
 function ShareDetails(props){
+   
     {if(props.showModal){
          return(
         <p>Share Details</p>
@@ -8,7 +9,8 @@ function ShareDetails(props){
     } else {
         return null;
     }}
-   
+    
 }
+
 
 export default ShareDetails;

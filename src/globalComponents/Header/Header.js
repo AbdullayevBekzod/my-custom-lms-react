@@ -4,7 +4,7 @@ import {useState} from 'react';
 function Header(isAuth) {
     // const auth = isAuth;
     const [inputVal, setInputVal] = useState();
-    console.log(inputVal);
+    // console.log(inputVal);
     let changeInput = (val) =>{
         setInputVal(val);
     }
@@ -30,7 +30,7 @@ function Header(isAuth) {
                 </button>
             </div>
             <div className='col-span-1'>
-                <a>Logout</a>
+                <button>Logout</button>
             </div>
         </div>
     );

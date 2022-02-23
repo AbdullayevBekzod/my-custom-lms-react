@@ -22,8 +22,8 @@ function Dashboard(props) {
                         </p>
                       </div>
                       <div className="time">
-                        <p className="text-gray-500 text-sm ">23:59</p>
-                        <p className="text-gray-500 text-sm ">17.01.2022</p>
+                        <p className="text-gray-500 text-sm ">{ deadline.date}</p>
+                        <p className="text-gray-500 text-sm ">{deadline.date}</p>
                       </div>
                     </div>
                   })
